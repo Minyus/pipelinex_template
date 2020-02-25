@@ -11,6 +11,9 @@ RUN_CONFIG:
   load_versions: # None
 
 MLFLOW_LOGGING_CONFIG:
+  uri: sqlite:///mlruns/sqlite.db
+  experiment_name: experiment_001
+  artifact_location: .//mlruns/experiment_001
   offset_hours: 0
   logging_artifacts:  # None
   
