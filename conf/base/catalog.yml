@@ -1,10 +1,6 @@
-# Kedro DataSets:
-# https://kedro.readthedocs.io/en/latest/kedro.io.html#data-sets
-# https://kedro.readthedocs.io/en/latest/kedro.contrib.io.html
+# Kedro DataSets: https://kedro.readthedocs.io/en/latest/kedro.contrib.io.html
 
 /:
-  type: CSVLocalDataSet
-#  type: PickleLocalDataSet
-#  type: JSONLocalDataSet
-#  type: kedro.contrib.io.yaml_local.YAMLLocalDataSet
+  type: pandas.CSVDataSet
+  # type: pickle.PickleDataSet
   cached: False
