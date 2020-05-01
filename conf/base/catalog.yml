@@ -1,4 +1,5 @@
-# Kedro DataSets: https://kedro.readthedocs.io/en/latest/kedro.contrib.io.html
+# https://kedro.readthedocs.io/en/latest/04_user_guide/04_data_catalog.html
+# https://kedro.readthedocs.io/en/latest/kedro.extras.datasets.html
 
 /:
   type: pandas.CSVDataSet
