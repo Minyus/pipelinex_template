@@ -1,7 +1,7 @@
-# https://kedro.readthedocs.io/en/latest/04_user_guide/04_data_catalog.html
-# https://kedro.readthedocs.io/en/latest/kedro.extras.datasets.html
+# [reference](https://kedro.readthedocs.io/en/latest/04_user_guide/04_data_catalog.html)
+# [datasets](https://kedro.readthedocs.io/en/latest/kedro.extras.datasets.html)
 
-/:
-  type: pandas.CSVDataSet
-  # type: pickle.PickleDataSet
+/: # default
+  type: pandas.CSVDataSet # shortcut for kedro.extras.datasets.pandas.CSVDataSet
+  # type: pickle.PickleDataSet # shortcut for kedro.extras.datasets.pickle.PickleDataSet
   cached: False
