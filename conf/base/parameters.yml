@@ -1,8 +1,9 @@
+params:
 
 RUN_CONFIG:
   pipeline_name: __default__
-  only_missing: True
-  runner: SequentialRunner # None
+  only_missing: False
+  runner: SequentialRunner
   tags: # None
   node_names: # None
   from_nodes: # None
@@ -15,15 +16,19 @@ MLFLOW_LOGGING_CONFIG:
   experiment_name: experiment_001
   artifact_location: ./mlruns/experiment_001
   offset_hours: 0
-  logging_artifacts:  # None
-  
+  logging_artifacts: # None
+
 PIPELINES:
   __default__:
     =: pipelinex.FlexiblePipeline
-    parameters_in_inputs: False
-    module:  # None
+    module: # None
     decorator: pipelinex.log_time
     nodes:
+      - inputs: # None
+        func:
+          =: pipelinex.ToPipeline
+          _: { $: params }
+        outputs: params
 
       - inputs:
         func:
