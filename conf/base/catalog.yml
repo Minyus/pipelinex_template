@@ -2,6 +2,8 @@
 # [datasets](https://kedro.readthedocs.io/en/latest/kedro.extras.datasets.html)
 
 /: # default
-  type: pandas.CSVDataSet # shortcut for kedro.extras.datasets.pandas.CSVDataSet
-  # type: pickle.PickleDataSet # shortcut for kedro.extras.datasets.pickle.PickleDataSet
-  cached: False
+  type: pickle.PickleDataSet # shortcut for kedro.extras.datasets.pickle.PickleDataSet
+  # type: pipelinex.CSVLocalDataSet
+  # cached: False
+  # load_args:
+  # save_args:
