@@ -1,9 +1,7 @@
-params:
-
 RUN_CONFIG:
   pipeline_name: __default__
+  runner: SequentialRunner # or ParallelRunner
   only_missing: False
-  runner: SequentialRunner
   tags: # None
   node_names: # None
   from_nodes: # None
@@ -24,12 +22,6 @@ PIPELINES:
     module: # None
     decorator: pipelinex.log_time
     nodes:
-      - inputs: # None
-        func:
-          =: pipelinex.ToPipeline
-          _: { $: params }
-        outputs: params
-
       - inputs:
         func:
         outputs:
